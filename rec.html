@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flask ML Prediction</title>
+    <style>
+        body {
+            background-image: url('static/background.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center top;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: rgb(24, 183, 24);
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .image-container {
+            position: relative;
+        }
+
+        img {
+            max-width: 300px;
+            border: 5px solid #457b9d;
+            border-radius: 10px;
+            position: absolute;
+            margin-top: 150px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Style for the anchor tag */
+        a {
+            color: #FFF;
+            /* White text color */
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            background-color: #F5D76E;
+            /* Yellow background color */
+            padding: 8px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 300px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>PREDICTED CROP:</h1>
+    {% if predicted_crop == "rice" %}
+    <h1>{{ predicted_crop }}</h1>
+    <img src='static/rice.jpg' alt='Rice'>
+    {% elif predicted_crop == "maize" %}
+    <h1>{{ predicted_crop }}</h1>
+    <img src='static/maize.jpeg' alt='Maize'>
+    {% elif predicted_crop == "chickpea" %}
+    <h1>{{ predicted_crop }}</h1>
+    <img src='static/chickpeas.jpg' alt='Chickpea'>
+    {% elif predicted_crop == "kidneybeans" %}
+    <h1>{{ predicted_crop }}</h1>
+    <img src='static/kidneybeans.jpg' alt='Kidney Beans'>
+    {% elif predicted_crop == "pigeonpeas" %}
+    <h1>{{ predicted_crop }}</h1>
+    <img src='static/pigeonpeas.jpg' alt='Pigeon Peas'>
+    {% elif predicted_crop == "mothbeans" %}
+    <h1>{{ predicted_crop }}</h1>
+    <img src='static/mothbean.jpg' alt='Moth Beans'>
+    {% elif predicted_crop == "mungbean" %}
+    <h1>{{ predicted_crop }}</h1>
+    <img src='static/Mungbean.jpg' alt='Mung Bean'>
+    {% elif predicted_crop == "blackgram" %}
+    <h1>{{ predicted_crop }}</h1>
+    <img src='static/blackgram.jpg' alt='Black Gram'>
+    {% elif predicted_crop == "lentil" %}
+    <h1>{{ predicted_crop }}</h1>
+    <img src='static/lentils.jpg' alt='Lentil'>
+    {% elif predicted_crop == "pomegranate" %}
+    <h1>{{ predicted_crop }}</h1>
+    <img src='static/pomegranet.jpg' alt='Pomegranate'>
+    {% elif predicted_crop == "banana" %}
+    <h1>{{ predicted_crop }}</h1>
+    <img src='static/banana.jpg' alt='Banana'>
+    {% elif predicted_crop == "mango" %}
+    <h1>{{ predicted_crop }}</h1>
+    <img src='static/mango.jpg' alt='Mango'>
+    {% elif predicted_crop == "grapes" %}
+    <h1>{{ predicted_crop }}</h1>
+    <img src='static/grapes.jpg' alt='Grapes'>
+    {% elif predicted_crop == "watermelon" %}
+    <h1>{{ predicted_crop }}</h1>
+    <img src='static/watermelon.jpg' alt='Watermelon'>
+    {% elif predicted_crop == "muskmelon" %}
+    <h1>{{ predicted_crop }}</h1>
+    <img src='static/muskmelon.jpg' alt='Muskmelon'>
+    {% elif predicted_crop == "apple" %}
+    <h1>{{ predicted_crop }}</h1>
+    <img src='static/apple.jpg' alt='Apple'>
+    {% elif predicted_crop == "orange" %}
+    <h1>{{ predicted_crop }}</h1>
+    <img src='static/orange.jpg' alt='Orange'>
+    {% elif predicted_crop == "papaya" %}
+    <h1>{{ predicted_crop }}</h1>
+    <img src='static/papaya.jpg' alt='Papaya'>
+    {% elif predicted_crop == "coconut" %}
+    <h1>{{ predicted_crop }}</h1>
+    <img src='static/coconut.jpg' alt='Coconut'>
+    {% elif predicted_crop == "cotton" %}
+    <h1>{{ predicted_crop }}</h1>
+    <img src='static/cotton.jpg' alt='Cotton'>
+    {% elif predicted_crop == "jute" %}
+    <h1>{{ predicted_crop }}</h1>
+    <img src='static/jute.jpg' alt='Jute'>
+    {% elif predicted_crop == "coffee" %}
+    <h1>{{ predicted_crop }}</h1>
+    <img src='static/coffee.jpg' alt='Coffee'>
+    {% else %}
+    <h1>No prediction available.</h1> 
+    {% endif %}
+    <a href='/'>HOME</a>
+</body>
+
+</html>
